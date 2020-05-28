@@ -20,21 +20,22 @@
     <Grid>
 
         <StackPanel Orientation="Vertical" 
-                    Width="300"
+                    Width="400"
                     HorizontalAlignment="Center" 
                     VerticalAlignment="Center">
 
-            <TextBox Text="{Binding Number1, Mode=TwoWay}" Style="{StaticResource StyleTextbox}"></TextBox>
-            <TextBox Text="{Binding Number2, Mode=TwoWay}" Style="{StaticResource StyleTextbox}"></TextBox>
-            <TextBlock Text="{Binding Total, Mode=OneWay}" FontSize="40"></TextBlock>
-            <Button Content="Just Reload" Padding="10" 
+            <TextBox Text="{Binding Number1, Mode=TwoWay}" Style="{StaticResource StyleTextbox}" Width="250" PlaceholderText="enter number 1"></TextBox>
+            <TextBox Text="{Binding Number2, Mode=TwoWay}" Style="{StaticResource StyleTextbox}" Width="250" PlaceholderText="enter number 2"></TextBox>
+            <TextBlock Text="{Binding Total, Mode=OneWay}" FontSize="40"  Width="250"></TextBlock>
+            
+            <Button Content="Reload Page" Padding="10" 
                     HorizontalAlignment="Stretch" 
-                    x:Name="BtnReload"
+                    x:Name="BtnReload"  Width="250"
                     Click="BtnReload_Click"
-                    Margin="10" FontSize="28"></Button>
+                    Margin="10 10 10 50" FontSize="28"></Button>
 
             <Rectangle Width="20" 
-                       StrokeThickness="1"
+                       StrokeThickness="1" 
                        Stroke="AliceBlue"
                        Margin="-295 -45 -50 -60"
                        Height="30"/>
@@ -71,10 +72,12 @@
                 </Custom:ButtonCust2.AdditionalContent>
             </Custom:ButtonCust2>
 
-            <TextBlock Foreground="Wheat" TextWrapping="WrapWholeWords">
-                The right click works correctly on pointer enter, pointer exit, clicked, released, but
-                The left click not works as expected
-            </TextBlock>
+<TextBlock Foreground="Wheat" xml:space="preserve" TextWrapping="WrapWholeWords" >The right click works correctly on pointer enter, pointer exit, clicked, released, but the command property not works.
+
+The left click not works when pointer released, but the command property works.
+                
+NB: I do not want the right click. I need only the left click to work both animation and command property.
+</TextBlock>
 
 
         </StackPanel>

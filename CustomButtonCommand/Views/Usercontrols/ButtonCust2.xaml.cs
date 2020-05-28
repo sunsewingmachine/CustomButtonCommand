@@ -155,19 +155,10 @@ namespace CustomButtonWithMvvmCommand.Views.Usercontrols.BtnCust2
         public ButtonCust2()
         {
             this.InitializeComponent();
-            // GrdBase
-            // PointerReleased = "ImgBack_OnPointerReleased"
 
             //GrdBase.AddHandler(PointerPressedEvent, new PointerEventHandler(ImgBack_OnPointerReleased), true);
             //GrdBase.PointerReleased += GrdBase_PointerReleased;
             //ImgBack.PointerReleased += ImgBack_PointerReleased;
-
-            //GrdBase.AddHandler(PointerReleasedEvent, new PointerEventHandler(Some_PointerReleased), true);
-
-            //if (StoryPointerUp3.GetCurrentState() == ClockState.Active) return;
-            //StoryPointerUp3.Stop();
-            //StoryPointerUp3.Begin();
-            //StoryPointerUp3.RepeatBehavior = RepeatBehavior.Forever;
         }
 
         private void ButtonBase_PointerPressed(object sender, PointerRoutedEventArgs e)
@@ -190,62 +181,13 @@ namespace CustomButtonWithMvvmCommand.Views.Usercontrols.BtnCust2
         private void GrdBase_PointerCanceled(object sender, PointerRoutedEventArgs e)
         {
             //e.Handled = true;
-            //if (StoryPointerUp3.GetCurrentState() == ClockState.Active) return;
-            //StoryPointerUp3.Stop();
-            //StoryPointerUp3.Begin();
 
         }
 
         private void GrdBase_PointerCaptureLost(object sender, PointerRoutedEventArgs e)
         {
-
+            //e.Handled = true;
         }
-
-
-        //private void Some_PointerReleased(object sender, PointerRoutedEventArgs e)
-        //{
-        //    e.Handled = true;
-        //    if (StoryPointerUp3.GetCurrentState() == ClockState.Active) return;
-        //    StoryPointerUp3.Stop();
-        //    StoryPointerUp3.Begin();
-        //}
-
-        //private void ImgBack_OnPointerPressed(object sender, PointerRoutedEventArgs e)
-        //{
-        //    //if (StoryPointerDown.GetCurrentState() == ClockState.Active) return;
-        //    //StoryPointerDown.Stop();
-        //    //StoryPointerDown.Begin();
-
-        //    //if (StoryPointerDown2.GetCurrentState() == ClockState.Active) return;
-        //    //StoryPointerDown2.Stop();
-        //    //StoryPointerDown2.Begin();
-        //    return;
-        //    if (StoryPointerDown3.GetCurrentState() == ClockState.Active) return;
-        //    StoryPointerDown3.Stop();
-        //    StoryPointerDown3.Begin();
-        //}
-
-        //private void ImgBack_PointerReleased(object sender, PointerRoutedEventArgs e)
-        //{
-        //}
-
-        //private void GrdBase_PointerReleased(object sender, PointerRoutedEventArgs e)
-        //{
-        //    //PointerReleased = "GrdBase_PointerReleased"
-        //    //e.Handled = true;
-        //    //if (StoryPointerUp3.GetCurrentState() == ClockState.Active) return;
-        //    //StoryPointerUp3.Stop();
-        //    //StoryPointerUp3.Begin();
-
-        //    //if (StoryPointerUp.GetCurrentState() == ClockState.Active) return;
-        //    //StoryPointerUp.Stop();
-        //    //StoryPointerUp.Begin();
-
-        //    //if (StoryPointerUp2.GetCurrentState() == ClockState.Active) return;
-        //    //StoryPointerUp2.Stop();
-        //    //StoryPointerUp2.Begin();  
-
-        //}
 
 
 
@@ -259,14 +201,6 @@ namespace CustomButtonWithMvvmCommand.Views.Usercontrols.BtnCust2
 
         private void ImgBack_OnPointerEntered(object sender, PointerRoutedEventArgs e)
         {
-            //if (StoryPointerEntered.GetCurrentState() == ClockState.Active) return;
-            //StoryPointerEntered.Stop();
-            //StoryPointerEntered.Begin();
-
-            //if (StoryPointerEntered2.GetCurrentState() == ClockState.Active) return;
-            //StoryPointerEntered2.Stop();
-            //StoryPointerEntered2.Begin();
-
             if (StoryPointerEntered3.GetCurrentState() == ClockState.Active) return;
             StoryPointerEntered3.Stop();
             StoryPointerEntered3.Begin();
@@ -276,23 +210,11 @@ namespace CustomButtonWithMvvmCommand.Views.Usercontrols.BtnCust2
 
         private void ImgBack_OnPointerExited(object sender, PointerRoutedEventArgs e)
         {
-            //if (StoryPointerExited.GetCurrentState() == ClockState.Active) return;
-            //StoryPointerExited.Stop();
-            //StoryPointerExited.Begin();
-
-            //if (StoryPointerExited2.GetCurrentState() == ClockState.Active) return;
-            //StoryPointerExited2.Stop();
-            //StoryPointerExited2.Begin();
-
             if (StoryPointerExited3.GetCurrentState() == ClockState.Active) return;
             StoryPointerExited3.Stop();
             StoryPointerExited3.Begin();
             return;
         }
-
-       
-
-
 
         private void GrdBase_OnSizeChanged(object sender, SizeChangedEventArgs e)
         {
